@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>telran.java55</groupId>
-	<artifactId>06_Forum-Service-MongoDB</artifactId>
+	<artifactId>07_Forum-Service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>06_Forum-Service-MongoDB</name>
 	<description>Forum service</description>

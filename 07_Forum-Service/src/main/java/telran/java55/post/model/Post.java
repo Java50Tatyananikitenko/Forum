@@ -12,7 +12,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 @Getter
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -27,7 +26,7 @@ public class Post {
 	String author;
 	LocalDateTime dateCreated = LocalDateTime.now();
 	Set<String> tags = new HashSet<String>();
-	Integer likes;
+	Integer likes = 0;
 	List<Comment> comments = new ArrayList<Comment>();
 
 	public Post(String title, String content, String author, Set<String> tags) {
@@ -39,6 +38,9 @@ public class Post {
 	}
 
 	public void addLike() {
+		 if (likes == null) {
+	            likes = 0;
+	        }
 		likes++;
 	}
 
@@ -57,4 +59,5 @@ public class Post {
 	public boolean removeComment(Comment comment) {
 		return comments.remove(comment);
 	}
+
 }
